@@ -1,3 +1,12 @@
+## Function makeCacheMatrix() produces list of functions for setting and getting
+## back to the environment values of matrix and inverse matrix. Function makeCacheMatrix()
+## should be called on your initial matrix before cacheSolve() to set initial values!
+
+## Function cacheSolve() checks if inverse matrix is already solved in the environment and  
+## returns inverse matrix. Otherwise performs matrix inverse solving, save inverse matrix 
+## and returns result. There is no checking for square matrix and det()!=0 
+## because for this assignment we assume that matrix is always invertible
+
 makeCacheMatrix <- function(x = matrix()) {
   j <- NULL
   set <- function(y){
